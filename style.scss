@@ -1,0 +1,540 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
+
+/* ::::::::::::::::GRID::::::::::::::: */
+
+[class*="col-"]{
+	float: left;
+	min-height: 1px;
+}
+
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.col-offset-1 {
+	margin-left: 8.33%;
+}
+.col-offset-2 {
+	margin-left: 16.66%;
+}
+.col-offset-3 {
+	margin-left: 25%;
+}
+.col-offset-4 {
+	margin-left: 33.33%;
+}
+.col-offset-5 {
+	margin-left: 41.68%;
+}
+.col-offset-6 {
+	margin-left: 58%;
+}
+.col-offset-7 {
+	margin-left: 58.33%;
+}
+.col-offset-8 {
+	margin-left: 66.66%;
+}
+.col-offset-9 {
+	margin-left: 75%;
+}
+.col-offset-10 {
+	margin-left: 83.33%;
+}
+.col-offset-11 {
+	margin-left: 91.66;
+}
+
+/* grid rwd */
+
+@media (max-width: 767px){
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media (min-width: 768px) {
+    /* For desktop: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+
+
+
+$icon-color: #b7b7b7;
+
+$blue: #0090ff;
+
+$white: #fff;
+
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	border-box: box-sizing;
+}
+
+.clear-both {
+	 clear: both;
+}
+
+.row:before,
+.row:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    @extend .clear-both;
+}
+
+.row:after {
+    @extend .clear-both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+    @extend .clear-both;
+}
+
+header {
+  background-color: #313234;
+  height: 50px;
+  background-color: rgba(0,0,0, 0.5)
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+	nav { 
+		img {
+	    	padding: 10px 0;
+		}
+		
+		ul {
+	    	float: right;
+	    	margin: 0;
+	    	padding: 0;
+	    	list-style-type: none;
+	    	li {
+				display:inline-block;
+				a {
+	    			line-height: 50px;
+	    			display: block;
+	    			color: $white;
+	    			padding: 0 20px;
+	    			text-decoration: none;
+	    			text-transform: uppercase;
+	    			&:hover {
+	    				background: #ccc;
+	    			}
+	    		}   	
+			}
+	    }
+	}
+}
+
+.hero {
+	width: 100%;
+	height: 500px;
+	background-image: url("https://images.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	position: relative;
+	.icon-container {
+		position: absolute;
+		bottom: 10px;
+		left: calc(50% - 30px);
+	}
+	.slogan {
+		color: $icon-color;
+		background-color: rgba(0, 0, 0, 0.5);
+		float: right;
+		text-align: left;
+		padding: 15px 250px 15px 30px;
+		margin-top: 170px;
+		max-width: 800px;
+		text-transform: uppercase;
+		h1 {
+			font-weight: 300;
+			span {
+				color: $white;
+				font-weight: 900;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/* :::::::Korzysci::::::::: */
+
+.benefits {
+	margin-top: 50px;
+	text-align: center;
+	.container {
+		.row {
+			.item {
+				.black {
+					color: $white;
+					background: #000;
+				}
+				.blue {
+					color: $white;
+					background: $blue;
+				}
+				h2 {
+					text-transform: uppercase;
+				}
+				.fa {
+					font-size: 120px;
+					padding: 20px;
+					border-radius: 15px;
+				}
+				p {
+					color: $icon-color;
+				}
+			}
+			.item-blue {
+				 h2 {
+					color: $blue;
+				}
+			}
+		}
+	}
+}
+
+
+
+.featured-works {
+	margin: 50px auto;
+	.featured {
+		h1 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+			text-decoration: justify;
+			color: $icon-color;
+		}
+	}
+}
+
+/*::::::::::::GALERIA:::::::::::*/
+
+section.gallery {
+	.photo-container {
+		position: relative;
+		bottom: 10px;
+		&:hover {
+			.layer {
+				display: block;
+			}
+		}
+		img {
+			width: 100%;
+			display: block;
+		}
+		.layer {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0,0,0,0.5);
+			.icon-container {
+				color: $white;
+			    position: absolute;
+			    left: calc(50% - 30px);
+			    top: calc(50% - 8px);
+			    i {
+					margin: 0 5px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+/*::::::::::OUR TEAM:::::::::::*/
+
+section.team {
+	margin: 50px auto;
+	h4 {
+		text-align: center;
+		font-size: 34px;
+	}
+	.person-container {
+		position: relative;
+		border-radius: 50%;
+		overflow: hidden;
+		width: 160px;
+		height: 160px;
+	    margin: auto;
+	    &:hover {
+	    	.layer {
+				display: block;
+			}
+	    }
+	    img {
+			width: 100%;
+			height: 160px; 
+			display: block;
+		}
+		.layer {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0,0,0,0.5);
+			.desc-container {
+				h5 {
+					color: $white;
+				    position: absolute;
+				    left: calc(50% - 25px);
+				    top: calc(50% - 12px);
+				}
+			}
+		}
+	}
+}
+
+/* ::::::::::::Tablet:::::::::::::::::*/
+section.tablet-section {
+	background: rgba(0,0,0,0.5);
+	padding-top: 40px;
+	margin-bottom: 0;
+	.tablet {
+		width: 80%;
+		text-align: center;
+	}
+	h2,
+	p {
+		color: #ddd;
+		text-align: left;
+	}
+}
+
+
+
+/*:::::::::::Statistics::::::::::::::*/
+
+.statistics {
+	margin: 50px auto;
+	.row {
+		.stats {
+			h1 {
+				font-size: 70px;
+				font-weight: bold;
+				font-family: 'Bevan', cursive;
+				margin: 1px auto;
+				text-align: center;
+			}
+			p {
+				color: $blue;
+				font-size: 23px;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin: 1px auto;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+/*::::::::::::::::Footer:::::::::::::*/
+
+footer {
+	background:  #313234; 
+	color: $white;
+	.about-us { 
+		h3 {
+			text-align: left;
+		}
+		p {
+			padding-right: 20px;
+			text-align: left;
+		}
+	.social .fa {
+		text-align: center;
+		margin: 0 5px;
+		background: $blue;
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		cursor: pointer;
+	}
+}
+
+.copy {
+	overflow: auto;
+	background: #161616;
+	width: 100%;
+	p {
+		color: $white;
+		text-align: center;
+	}
+}
+ 
+
+@media (max-width: 767px) {
+	header > nav ul {
+		float: none;
+		text-align: center;
+	}
+	header > nav ul > li {
+  		display: block;
+	}
+	header > nav ul > li > a {
+		float: none;
+	}
+
+	header {
+		height: 200px;
+	}
+
+	header img {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	section.hero .slogan {
+		width: 100%;
+		padding: 0 70px;
+	}
+	
+	section.hero .slogan h1 {
+		text-align: center;
+	}
+	
+	section.benefits,
+	section.featured-works {
+		padding: 0 10px;
+		text-align: center;
+		text-decoration: justify;
+	}
+	
+	section.tablet-section {
+		padding: 0 10px;
+		text-align: center;
+	}
+	
+	section.gallery .photo-container .layer {
+	display: none;
+	background: rgba(0,0,0,0);
+	}
+
+	section.gallery .photo-container:hover .layer {
+	display: none;
+	}
+	
+	section.team .person-container .layer {
+	display: none;
+	background: rgba(0,0,0,0);
+	}
+
+	section.team .person-container:hover .layer {
+	display: none;
+	}
+	
+	section.tablet-section h2, p {
+		text-align: center;
+	}
+	
+	footer {
+		text-align: center;
+	}
+	
+	footer .about-us h3 {
+		text-align: center;
+	}
+	
+	footer .contact {
+		margin-bottom: 10px;
+	}
+	
+	footer .about-us, .address, .social {
+		padding: 0 10px 10px 10px;
+	}
+}
+
+}
